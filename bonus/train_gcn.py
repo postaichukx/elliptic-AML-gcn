@@ -1,4 +1,5 @@
 from __future__ import annotations
+from pathlib import Path
 
 import json
 import random
@@ -27,7 +28,8 @@ from torch_geometric.utils import to_undirected
 
 CLASS_NAMES = {0: "licit", 1: "illicit", 2: "unknown"}
 
-DATA_DIR = "data/elliptic"
+PROJECT_ROOT = Path(__file__).resolve().parent
+DATA_DIR = str(PROJECT_ROOT / "data" / "elliptic")
 ITERATIONS = 200
 HIDDEN_CHANNELS = 128
 DROPOUT = 0.5
