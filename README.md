@@ -238,6 +238,16 @@ The illicit class represents a minority of labeled transactions. Accuracy alone 
 └── README.md
 ```
 
+## Training and Evaluation Notes
+
+- `PATIENCE = 8` means eight validation checks, not eight training iterations. Since `EVAL_EVERY = 5`, early stopping may stop training after approximately 40 iterations without improvement.
+
+- The model handles class imbalance by computing class weights from training nodes only.
+
+- Threshold tuning uses the validation set, while final performance is evaluated on the separate test set.
+
+- The dataset is highly imbalanced. For this reason, illicit-class F1-score, recall, ROC-AUC, and average precision are more informative than accuracy alone. This follows the evaluation focus of the original [Elliptic paper](https://arxiv.org/abs/1908.02591).
+
 ## Notes
 
 This repository contains an academic machine-learning experiment.
