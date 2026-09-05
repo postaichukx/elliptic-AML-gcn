@@ -66,6 +66,7 @@ The project uses PyTorch Geometric's `EllipticBitcoinDataset`. During the first 
 Run:
 
 ```bash
+cd bonus
 python train_gcn.py
 ```
 
@@ -130,6 +131,7 @@ The dataset is not included in this repository. Download it from the official Ka
 Install the dependencies:
 
 ```bash
+cd bonus
 python -m pip install -r requirements.txt
 ```
 
@@ -140,6 +142,7 @@ python -m pip install -r requirements.txt
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+cd bonus
 python -m pip install -r requirements.txt
 ```
 
@@ -148,6 +151,7 @@ python -m pip install -r requirements.txt
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+cd bonus
 python -m pip install -r requirements.txt
 ```
 
