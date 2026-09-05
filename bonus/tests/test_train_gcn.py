@@ -14,7 +14,10 @@ import train_gcn
 
 class TrainGcnConfigTests(unittest.TestCase):
     def test_hyperparameters_are_global_variables(self) -> None:
-        self.assertEqual(train_gcn.DATA_DIR, "data/elliptic")
+        self.assertEqual(
+    train_gcn.DATA_DIR,
+    str(Path(train_gcn.__file__).resolve().parent / "data" / "elliptic"),
+)
         self.assertEqual(train_gcn.ITERATIONS, 200)
         self.assertEqual(train_gcn.HIDDEN_CHANNELS, 128)
         self.assertEqual(train_gcn.DROPOUT, 0.5)
